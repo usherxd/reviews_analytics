@@ -12,3 +12,15 @@ sun_len = 0
 for d in data:
     sun_len += len(d)
 print('平均留言長度為', sun_len / len(data))
+
+new = []
+for d in data:
+    if len(d) < 100:
+        new.append(d)
+print('總共有', len(new),'筆資料，字數小於100。')
+
+good = []
+for d in data:
+    if 'good' in d:
+        good.append(d)
+print('總共有', len(good), '筆留言提到 good 。')
